@@ -1,0 +1,16 @@
+/* Hero Banner */
+.hero_background {
+    background-image: url(../../assets/images/signupbkg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1200px;
+  }
+
+
+
+.gridhero{
+    background-image: url(../../assets/images/logo_nobkg.png);
+    background-size:95%;
+    background-repeat: no-repeat;
+    height: 40%;
+}
