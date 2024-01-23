@@ -1,14 +1,13 @@
 import React from 'react';
 import {Container,Navbar,Nav} from 'react-bootstrap';
-import {BrowserRouter as Router,NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 
 
 
-function Cnavbar() {
+function NavbarR() {
     return (
     <Container  className="bg-dark text-white" fluid>
-      <Router>
         <Navbar>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -19,11 +18,10 @@ function Cnavbar() {
             </Nav>
           </Navbar.Collapse>
           </Navbar>
-        </Router>
         </Container>
     );
   }
-  export default Cnavbar;
+  export default NavbarR;
 
 
 
