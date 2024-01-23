@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import {Button, Form, Row, Container,Col} from 'react-bootstrap';
 import "./style.css";
 import * as formik from 'formik';
@@ -116,7 +115,7 @@ function SignUp() {
                                     </Row>
                                     <Row>
                                         <Col>
-                                        <Button as={Col} variant="primary" type="submit" onClick={handleSubmit}>Register</Button>
+                                        <Button as={Col} variant="primary" type="submit"> Register</Button>
                                         </Col> 
                                     </Row>
                                 </Form>)}

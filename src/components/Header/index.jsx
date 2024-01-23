@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container,Navbar,Nav} from 'react-bootstrap';
-import {BrowserRouter as Router, Link,NavLink} from "react-router-dom";
+import {BrowserRouter as Router,NavLink} from "react-router-dom";
 
 
 
@@ -26,9 +26,5 @@ function Cnavbar() {
   export default Cnavbar;
 
 
-  
-//   <h1 className="navbar-brand">
-//   <Link to="/" className="brand-link">AmplifyStudio</Link>
-// </h1>
 
 
