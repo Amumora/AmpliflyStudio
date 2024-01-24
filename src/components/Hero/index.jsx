@@ -38,12 +38,12 @@ function SignUp() {
 
             <Container>
                 <Row>
-                    <Col shadow p-3 mb-5 bg-body-tertiary rounded>
+                    <Col>
                         <Formik
                             validationSchema={schema}
                             initialValues={{
-                                firstName: 'Mark',
-                                lastName: 'Otto',
+                                firstName: 'Glenda',
+                                lastName: 'Cordova',
                                 email: '',
                                 password: '',
                             }}
@@ -53,10 +53,10 @@ function SignUp() {
                         >
                             {({ handleSubmit, handleChange, values, touched, errors }) => (
                                 <Form noValidate onSubmit={handleSubmit} >
-                                    <Container class="w-50 p-3" >
-                                        <Row className="mb-3 shadow-lg p-3 rounded">
+                                    <Container className="w-50"  >
+                                        <Row className="mb-4 shadow-lg p-5 rounded ">
                                             <Col>
-                                                <Form.Group as={Col} md="12" controlId="formFirstName">
+                                                <Form.Group as={Col} controlId="formFirstName">
                                                     <Form.Label></Form.Label>
                                                     <Form.Control
                                                         type="text"
@@ -69,7 +69,7 @@ function SignUp() {
                                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                                 </Form.Group>
 
-                                                <Form.Group as={Col} md="12" controlId="formEmail">
+                                                <Form.Group as={Col} controlId="formEmail">
                                                     <Form.Label></Form.Label>
                                                     <Form.Control
                                                         name="email"
@@ -84,7 +84,7 @@ function SignUp() {
                                             </Col>
 
                                             <Col>
-                                                <Form.Group as={Col} mb="12" controlId="formLastName">
+                                                <Form.Group as={Col} controlId="formLastName">
                                                     <Form.Label></Form.Label>
                                                     <Form.Control
                                                         name="lastName"
@@ -97,7 +97,7 @@ function SignUp() {
                                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
 
                                                 </Form.Group>
-                                                <Form.Group as={Col} mb="12" controlId="formPassword">
+                                                <Form.Group as={Col} controlId="formPassword">
                                                     <Form.Label></Form.Label>
                                                     <Form.Control
                                                         name="password"
@@ -110,19 +110,14 @@ function SignUp() {
                                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
-
+                                            <Row>
+                                                <Col>
+                                                    <Button style={{ backgroundColor: "#fcd5ce", borderColor: "#fcd5ce" }} className='text-dark' mt-4 variant="primary" type="submit"> Register</Button>
+                                                </Col>
+                                            </Row>
                                         </Row>
                                     </Container>
-                                             <Col>
-                                            </Col>
-                                    <Container>
 
-                                    </Container>
-                                    <Row>
-                                        <Col>
-                                            <Button style={{ backgroundColor: "#fcd5ce", borderColor: "#fcd5ce" }} className='text-dark' variant="primary" type="submit"> Register</Button>
-                                        </Col>
-                                    </Row>
                                 </Form>)}
                         </Formik>
                     </Col>
