@@ -70,7 +70,7 @@ function LoginSignUp() {
             <div className='login-page text-center'>
                 <h2></h2>
                 {loggedIn && <p className="Success" style={{ color: 'green' }}>Login successful!</p>}
-                <form onSubmit={handleSubmit} className='form'>
+                <form onSubmit={handleSubmit} className='form container'>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
 
                     <label className="email mt-5">Email:
