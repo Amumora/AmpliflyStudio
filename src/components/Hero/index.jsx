@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Form, Row, Container, Col } from 'react-bootstrap';
+import { Button, Form, Row, Container, Col, Image} from 'react-bootstrap';
 import "./style.css";
 import * as formik from 'formik';
 import * as yup from 'yup';
+import nobkg from '../../assets/images/logo_nobkg.png';
 
 
 
@@ -28,9 +29,10 @@ function SignUp() {
 
     return (
 
-        <Container className='hero_background d-flex d-sm-flex d-md-flex d-lg-flex justify-content-center align-items-center' fluid>
-            <Row className='w-100 p-5'>
-                <Col className='gridhero'></Col>
+        <Container className='hero_background d-flex justify-content-center align-items-center' fluid>
+            <Row className='d-flex justify-content-center align-items-center flex-wrap w-100 p-5'>
+                <Col className='d-flex justify-content-center align-items-center p-5'>
+                    <Image src={nobkg} fluid/></Col>
                 <Col className=' d-flex justify-content-center align-items-center ' >
                     <Formik
                         validationSchema={schema}
