@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
 import NavbarR from './components/Header';
-import  Wrapper  from './components/Wrapper';
+import Wrapper from './components/Wrapper';
 
 
 
@@ -15,9 +15,9 @@ function App() {
         <NavbarR />
         <Wrapper>
           <Routes>
-            <Route path="/" element={<Register/>} />
-            <Route path="/LogIn" element={<Login/>} />
-            <Route path="/Home" element={<Home/>} />
+            <Route path="/" element={<Register />} />
+            <Route path="/LogIn" element={<Login />} />
+            <Route path="/Home" element={<Home />} />
           </Routes>
         </Wrapper>
       </div>

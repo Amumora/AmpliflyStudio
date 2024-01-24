@@ -38,7 +38,7 @@ function SignUp() {
 
             <Container>
                 <Row>
-                    <Col>
+                    <Col shadow p-3 mb-5 bg-body-tertiary rounded>
                         <Formik
                             validationSchema={schema}
                             initialValues={{
@@ -53,68 +53,74 @@ function SignUp() {
                         >
                             {({ handleSubmit, handleChange, values, touched, errors }) => (
                                 <Form noValidate onSubmit={handleSubmit} >
-                                    <Row className="mb-3">
-                                        <Col>
-                                            <Form.Group as={Col} md="12" controlId="formFirstName">
-                                                <Form.Label></Form.Label>
-                                                <Form.Control
-                                                    type="text"
-                                                    name="firstName"
-                                                    value={values.firstName}
-                                                    onChange={handleChange}
-                                                    isValid={touched.firstName && !errors.firstName}
-                                                    placeholder="First Name"
-                                                    className="position-relative" />
-                                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                            </Form.Group>
+                                    <Container class="w-50 p-3" >
+                                        <Row className="mb-3 shadow-lg p-3 rounded">
+                                            <Col>
+                                                <Form.Group as={Col} md="12" controlId="formFirstName">
+                                                    <Form.Label></Form.Label>
+                                                    <Form.Control
+                                                        type="text"
+                                                        name="firstName"
+                                                        value={values.firstName}
+                                                        onChange={handleChange}
+                                                        isValid={touched.firstName && !errors.firstName}
+                                                        placeholder="First Name"
+                                                        className="position-relative" />
+                                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                                                </Form.Group>
 
-                                            <Form.Group as={Col} md="12" controlId="formEmail">
-                                                <Form.Label></Form.Label>
-                                                <Form.Control
-                                                    name="email"
-                                                    placeholder="Email"
-                                                    type="email"
-                                                    value={values.email}
-                                                    onChange={handleChange}
-                                                    isValid={touched.email && !errors.email}
-                                                    className="position-relative" />
-                                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                            </Form.Group>
-                                        </Col>
+                                                <Form.Group as={Col} md="12" controlId="formEmail">
+                                                    <Form.Label></Form.Label>
+                                                    <Form.Control
+                                                        name="email"
+                                                        placeholder="Email"
+                                                        type="email"
+                                                        value={values.email}
+                                                        onChange={handleChange}
+                                                        isValid={touched.email && !errors.email}
+                                                        className="position-relative" />
+                                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                                                </Form.Group>
+                                            </Col>
 
-                                        <Col>
-                                            <Form.Group as={Col} mb="12" controlId="formLastName">
-                                                <Form.Label></Form.Label>
-                                                <Form.Control
-                                                    name="lastName"
-                                                    value={values.lastName}
-                                                    onChange={handleChange}
-                                                    isValid={touched.lastName && !errors.lastName}
-                                                    placeholder="Last Name"
-                                                    type="text"
-                                                    className="position-relative" />
-                                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                                            <Col>
+                                                <Form.Group as={Col} mb="12" controlId="formLastName">
+                                                    <Form.Label></Form.Label>
+                                                    <Form.Control
+                                                        name="lastName"
+                                                        value={values.lastName}
+                                                        onChange={handleChange}
+                                                        isValid={touched.lastName && !errors.lastName}
+                                                        placeholder="Last Name"
+                                                        type="text"
+                                                        className="position-relative" />
+                                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
 
-                                            </Form.Group>
-                                            <Form.Group as={Col} mb="12" controlId="formPassword">
-                                                <Form.Label></Form.Label>
-                                                <Form.Control
-                                                    name="password"
-                                                    value={values.password}
-                                                    onChange={handleChange}
-                                                    isValid={touched.password && !errors.password}
-                                                    type="password"
-                                                    placeholder="Password"
-                                                    className="position-relative" />
-                                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                            </Form.Group>
-                                        </Col>
-                                        <Col>
-                                        </Col>
-                                    </Row>
+                                                </Form.Group>
+                                                <Form.Group as={Col} mb="12" controlId="formPassword">
+                                                    <Form.Label></Form.Label>
+                                                    <Form.Control
+                                                        name="password"
+                                                        value={values.password}
+                                                        onChange={handleChange}
+                                                        isValid={touched.password && !errors.password}
+                                                        type="password"
+                                                        placeholder="Password"
+                                                        className="position-relative" />
+                                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+                                    </Container>
+                                             <Col>
+                                            </Col>
+                                    <Container>
+
+                                    </Container>
                                     <Row>
                                         <Col>
-                                            <Button variant="primary" type="submit"> Register</Button>
+                                            <Button style={{ backgroundColor: "#fcd5ce", borderColor: "#fcd5ce" }} className='text-dark' variant="primary" type="submit"> Register</Button>
                                         </Col>
                                     </Row>
                                 </Form>)}

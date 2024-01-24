@@ -1,6 +1,6 @@
 /* Hero Banner */
 .hero_background {
-    background-image: url(../../assets/images/signupbkg.webp);
+    background-image: url(../../assets/images/003Register.gif);
     background-size: cover;
     background-repeat: no-repeat;
     height: 1200px;
@@ -18,4 +18,8 @@
 .bkgcustom {
   background-color: rgb(194, 92, 92);
   border-radius: 25px;
+}
+
+.btncolor {
+  background-color: aqua;
 }

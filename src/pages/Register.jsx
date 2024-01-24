@@ -5,11 +5,11 @@ import SignUp from '../components/Hero';
 
 
 function Register() {
-return(
-    <div>
-        <SignUp />
-    </div>
-);
+    return (
+        <div>
+            <SignUp />
+        </div>
+    );
 
 }
 
