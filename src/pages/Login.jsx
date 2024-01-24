@@ -65,8 +65,10 @@ function LoginSignUp() {
 
     return (
         <Wrapper>
+            <div className='gridhero2'></div>
+
             <div className='login-page text-center'>
-                <h2>Welcome to Amplify Studio</h2>
+                <h2></h2>
                 {loggedIn && <p className="Success" style={{ color: 'green' }}>Login successful!</p>}
                 <form onSubmit={handleSubmit} className='form'>
                     {error && <p style={{ color: 'red' }}>{error}</p>}

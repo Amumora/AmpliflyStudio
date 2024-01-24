@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import img from '../../assets/images/signupbkg.webp';
+import img from '../../assets/images/003Register.gif';
+import img1 from '../../assets/images/logo_nobkg.png';
 
 export const Wrapper = styled.div`
 padding: 4em;
@@ -11,6 +12,16 @@ height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
+
+.gridhero2 {
+  background-image: url(${img1});
+  background-repeat: no-repeat;
+  background-size:95%;
+  width: 50%;
+  height: 50%;
+  
+}
+
 
 .form{
     background: darkgray;
