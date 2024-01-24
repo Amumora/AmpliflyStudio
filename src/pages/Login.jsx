@@ -1,6 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { Wrapper } from "../components/Login/LoginStyle";
+import { NavLink ,} from "react-router-dom";
+// import SignUp from '../components/Hero';
+
 import { FaUser, FaLock } from "react-icons/fa";
 
 function LoginSignUp() {
@@ -111,7 +114,9 @@ function LoginSignUp() {
                         <a href="">Forgot Password</a>
                     </div>
                     <div>
-                        <p>Don't have an account?<a href="">Sign Up</a></p>
+                        <p>Don't have an account?
+                       <a href="/"> <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Register</NavLink></a>
+                            </p>
                     </div>
 
                     <button type="submit" className='submit'>Login</button>
