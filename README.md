@@ -13,9 +13,20 @@ Welcome to the Amplify studio Lyrics Music Player. This application is designed 
    https://amplify-studio-lyrics.netlify.app/
 ```
 # Deployment
+To clone this user should this steps:
 ```
 git clone https://github.com/Amumora/AmpliflyStudio
 ```
+After cloning
+ ```
+npm install
+```
+After running npm
+```
+npm run dev
+```
+
+
 # ScreenShot
 ![Amplifer studio (1)](https://github.com/Amumora/AmpliflyStudio/assets/144748204/371a7a1c-64f6-41c8-95d5-79626fe58caf)
 
@@ -36,6 +47,10 @@ git clone https://github.com/Amumora/AmpliflyStudio
 ## API's
 1. ShazamCore
 2. IPIFY
+# Further Development
+1. Login authentication
+2. Add favourite songs in user library
+3. Audio Recognition
 
 
 
