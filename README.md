@@ -14,7 +14,7 @@ Welcome to the Amplify studio Lyrics Music Player. This application is designed 
 ```
 # Deployment
 ```
-git clone 
+git clone https://github.com/Amumora/AmpliflyStudio
 ```
 # ScreenShot
 ![Amplifer studio (1)](https://github.com/Amumora/AmpliflyStudio/assets/144748204/371a7a1c-64f6-41c8-95d5-79626fe58caf)
