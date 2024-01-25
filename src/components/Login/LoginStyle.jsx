@@ -82,6 +82,7 @@ align-items: center;
     outline: none;
     border-radius:40px;
     margin-bottom: 10px;
+    background-color:#889696;
 
  }
  .email {
@@ -91,6 +92,14 @@ align-items: center;
 .password{
    color: dark;
 }
+Navlink {
+  color:white;
+ font-size: x-large;
+ font-family: Arial, Helvetica, sans-serif;
+ text-decoration: none;
+ margin: 10px;
+}
+
 
     @media (max-width: 1000px) {
     }

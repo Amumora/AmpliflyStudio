@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState ,useEffect } from 'react';
 import { Wrapper } from "../components/Login/LoginStyle";
 import { NavLink ,} from "react-router-dom";
 // import SignUp from '../components/Hero';
@@ -10,60 +10,63 @@ function LoginSignUp() {
     // State to manage form input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isValidEmail, setIsValidEmail] = useState(true);
-    const [isValidPassword, setIsValidPassword] = useState(true);
     const [error, setErrorMessage] = useState('');
     const [loggedIn, setLoggedIn] = useState('');
 
     //function to handle email validation
     const handleEmailChange = (e) => {
         const newEmail = e.target.value;
-        setEmail(newEmail);
-        validateEmail(newEmail);
+        setEmail(newEmail);     
     };
 
     const handlePasswordChange = (e) => {
         const newPassword = e.target.value;
         setPassword(newPassword);
-        validatePassword(newPassword);
-    };
-
-    const validateEmail = (value) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const isValid = emailRegex.test(value);
-        setIsValidEmail(isValid);
-    };
-
-    const validatePassword = (value) => {
-        // Simple password validation: at least 6 characters
-        const isValid = value.length >= 8;
-        setIsValidPassword(isValid);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
+
+        // function setSessionData(values) {
+        //     const data = JSON.stringify(values);
+        //     let uniqueUser = 'userData_' + values.email;
+        //     if (localStorage.getItem(uniqueUser) !== null) {
+        //         //console.log('Email already exists in local storage:');
+        //         return 'exists';
+        //     }
+        //     else {
+        //         localStorage.setItem(uniqueUser, data);
+        //         console.log('Data stored in local storage HERE :', values);
+        //         return 'success';
+        //     }
+        // }
+
+        //Retrieve email and password from local storage
+        const data = JSON.stringify(values);
+            let uniqueUser = 'userData_' + values.email;
+
+        const storedEmail = localStorage.getItem('uniqueUser');
+        const storedPassword = localStorage.getItem('userData_password');
+
         // Perform additional actions if both email and password are valid
 
-        if (email && password) {
+        if (email === storedEmail && password ===storedPassword) {
             // Perform login logic (e.g., send data to server, check credentials)
             console.log('Login successful!');
             setLoggedIn(true);
+            
         } else {
             console.log('Please enter both username and password.');
             setErrorMessage('Please enter both username and password.');
         }
 
-        if (isValidEmail && isValidPassword) {
-            // Your login logic here
-            console.log('Login successful!');
-
-        } else {
-            console.log('Login failed. Please check your credentials.');
-        }
+        
 
         setEmail('');
         setPassword('');
+
+       
     };
 
     return (
@@ -72,7 +75,9 @@ function LoginSignUp() {
 
             <div className='login-page text-center'>
                 <h2></h2>
-                {loggedIn && <p className="Success" style={{ color: 'green' }}>Login successful!</p>}
+                {loggedIn && <p className="Success" style={{ color: 'green' }} 
+                
+                > Login successful!</p>}
                 <form onSubmit={handleSubmit} className='form container'>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
 
@@ -85,14 +90,14 @@ function LoginSignUp() {
                             value={email}
                             onChange={handleEmailChange}
                         />
-                        {!isValidEmail && (
-                            <p style={{ color: 'red' }}>Please enter a valid email address.</p>
-                        )}
+                       
                     </label>
-                    <FaUser className='icon' />
+                  
                     <br />
 
                     <label className="password">Password:
+                  
+
                         <input
                             type="password"
                             id="password"
@@ -101,13 +106,8 @@ function LoginSignUp() {
                             value={password}
                             onChange={handlePasswordChange}
                         />
-                        {!isValidPassword && (
-                            <p style={{ color: 'red' }}>
-                                Password must be at least 6 characters long.
-                            </p>
-                        )}
+                      
                     </label>
-                    <FaLock className='icon' />
                     <br />
                     <div htmlFor="">
                         <input type="checkbox" /> Remember me
@@ -115,7 +115,7 @@ function LoginSignUp() {
                     </div>
                     <div>
                         <p>Don't have an account?
-                       <a href="/"> <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Register</NavLink></a>
+                     <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Register</NavLink>
                             </p>
                     </div>
 
