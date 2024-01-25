@@ -1,10 +1,7 @@
 import React from 'react';
 import { useState ,useEffect } from 'react';
 import { Wrapper } from "../components/Login/LoginStyle";
-import { NavLink ,} from "react-router-dom";
-// import SignUp from '../components/Hero';
-
-import { FaUser, FaLock } from "react-icons/fa";
+// import { NavLink ,} from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle'
@@ -77,9 +74,10 @@ function LoginSignUp({ setNavi }) {
         <Wrapper>
             <div className='gridhero2'></div>
 
-            <div className='login-page text-center
-                {loggedIn && <p className="Success" style={{ color: 'green' }}>Login successful!</p>}
-=======
+            <div className='login-page text-center'>
+
+            {loggedIn && <p className="Success" style={{ color: 'green' }}>Login successful!</p>}
+
                 <h2></h2>
                 {loggedIn && <p className="Success" style={{ color: 'green' }} 
                 
@@ -131,6 +129,8 @@ function LoginSignUp({ setNavi }) {
                     </NavLink>
                 </form>
             </div>
+            
+               
         </Wrapper>
     );
 
