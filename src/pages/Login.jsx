@@ -2,8 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import { Wrapper } from "../components/Login/LoginStyle";
 import { FaUser, FaLock } from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle'
+import * as bootstrap from 'bootstrap';
 
-function LoginSignUp() {
+function LoginSignUp({ setNavi }) {
     // State to manage form input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -68,19 +72,18 @@ function LoginSignUp() {
             <div className='gridhero2'></div>
 
             <div className='login-page text-center'>
-                <h2></h2>
                 {loggedIn && <p className="Success" style={{ color: 'green' }}>Login successful!</p>}
                 <form onSubmit={handleSubmit} className='form container'>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
 
-                    <label className="email mt-5">Email:
+                    <label htmlFor="email" className="email mt-5">Email:
                         <input
                             type="email"
                             id="email"
                             placeholder='Email'
                             className='input-box'
                             value={email}
-                            onChange={handleEmailChange}
+                            onChange={() => handleEmailChange()}
                         />
                         {!isValidEmail && (
                             <p style={{ color: 'red' }}>Please enter a valid email address.</p>
@@ -114,7 +117,9 @@ function LoginSignUp() {
                         <p>Don't have an account?<a href="">Sign Up</a></p>
                     </div>
 
-                    <button type="submit" className='submit'>Login</button>
+                    <NavLink to="Discover" end>
+                        <button type="submit" className='submit' onClick={() => setNavi(true)}>Login</button>
+                    </NavLink>
                 </form>
             </div>
         </Wrapper>

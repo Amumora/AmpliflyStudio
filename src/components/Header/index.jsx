@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle'
+import * as bootstrap from 'bootstrap';
 
 
 
@@ -14,7 +16,7 @@ function NavbarR() {
           <Nav variant="tabs" className="ms-auto ">
             <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Register</NavLink>
             <NavLink to="/Login" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Log In</NavLink>
-            <NavLink to="/Home" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
+            <NavLink to="/Discover" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

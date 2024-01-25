@@ -29,21 +29,6 @@ align-items: center;
    
 }
 
-  .input-box{
-    position: relative;
-   //  background: black;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-    border-radius: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid grey;
-    font-size: 16px;
-    padding: 20px 45px 20px 20px;
-    
-}
 .input-box{
     position: relative;
     background: black;
